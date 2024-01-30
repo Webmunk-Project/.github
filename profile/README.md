@@ -7,7 +7,7 @@ This is an (in-progress) open-source effort to create and distribute tools to po
 - Review existing Webmunk modules and learn how to build your own extension study. (TODO)
 - Learn how to create your own Webmunk modules. (TODO)
 - Learn how to customize your own Webmunk server. (TODO)
-- Replicate the Amazon study by standing up your own copy of the Webmunk infrastructure. (TODO)
+- [Replicate the Amazon study by standing up your own copy of the Webmunk infrastructure.](https://github.com/Webmunk-Project/.github/blob/main/docs/amazon-study/README.md) (IN-PROGRESS)
 - Replicate the cookie study by standing up your own copy of the Webmunk infrastructure. (TODO)
 - Read publications about studies that have used Webmunk. (TODO)
 - Learn how to contribute back to the Webmunk project. (TODO)
