@@ -1,0 +1,183 @@
+{
+  "actions": {
+    "webmunk-button": {
+      "on-click": [
+        {
+          "name": "log-click",
+          "ancestors": [
+            ".a-button-stack",
+            ".a-carousel-row-inner"
+          ]
+        },
+        {
+          "name": "log-click",
+          "ancestors": [
+            ".a-modal-scroller"
+          ]
+        }
+      ]
+    },
+    "webmunk-checkout-element": {
+      "on-click": [
+        "log-click"
+      ],
+      "on-hide": [
+        "log-hidden"
+      ],
+      "on-show": [
+        "log-visible"
+      ]
+    },
+    "webmunk-hide-block": {
+      "on-click": [
+        "log-click"
+      ],
+      "on-hide": [
+        "log-hidden"
+      ],
+      "on-show": [
+        "log-visible"
+      ]
+    },
+    "webmunk-highlight-block": {
+      "on-click": [
+        "log-click"
+      ],
+      "on-hide": [
+        "log-hidden"
+      ],
+      "on-show": [
+        "log-visible"
+      ]
+    },
+    "webmunk-asin-item": {
+      "on-click": [
+        "log-click"
+      ],
+      "on-hide": [
+        "log-hidden"
+      ],
+      "on-show": [
+        "log-visible"
+      ]
+    },
+    "__webmunk-scroll-bar": {
+      "on-scroll": [
+        "log-scroll"
+      ]
+    }
+  },
+  "additional-css": [],
+  "description": [
+    "Thank you for participating in the Webmunk Study.",
+    "If you have questions about the pilot or need technical support, please contact the Webmunk team at <a href='mailto:webmunk_study@hbs.edu'>webmunk_study@hbs.edu</a>.",
+    "Thanks again from Alex, Andrey, and Chiara!"
+  ],
+  "pending-tasks-label": "Please complete these tasks to get paid.",
+  "filters": [
+    {
+      "excludePaths": [
+        "^/gp/buy/",
+        "^/gp/video/"
+      ],
+      "hostEquals": "amazon.com"
+    },
+    {
+      "excludePaths": [
+        "^/gp/buy/",
+        "^/gp/video/"
+      ],
+      "hostSuffix": ".amazon.com"
+    },
+    {
+      "excludeHostSuffix": "aws.amazon.com"
+    }
+  ],
+  "key": "Qhvrmhxp9spERvawGPLozqnPhYgKoYjfTJv2CPQVqyk=",
+  "rules": [
+    {
+      "add-class": "webmunk-asin-item",
+      "match": "[data-asin!=''][data-asin]"
+    },
+    {
+      "add-class": "webmunk-checkout-element",
+      "match": ".a-modal-scroller:has(#turbo-checkout-modal-header)"
+    },
+    {
+      "add-class": "webmunk-button",
+      "match": ".a-button"
+    },
+    {
+      "add-class": "webmunk-button",
+      "match": "input[type='submit']"
+    },
+    {
+      "add-class": "webmunk-button",
+      "match": "input[type='button']"
+    },
+    {
+      "add-class": "webmunk-button",
+      "match": "button"
+    }
+  ],
+  "log-elements": [
+    {
+      "filters": {
+        "hostEquals": "amazon.com",
+        "hostSuffix": ".amazon.com",
+        "excludeHostSuffix": "aws.amazon.com"
+      },
+      "load": [
+        "div#ppd",
+        "[data-asin!=''][data-asin]",
+        "#spc-order-summary",
+        "#spc-orders",
+        "[cel_widget_id^='typ-shipmentSummary-']"
+      ],
+      "leave": [
+        "div#ppd",
+        "[data-asin!=''][data-asin]",
+        "#spc-order-summary",
+        "#spc-orders",
+        "[cel_widget_id^='typ-shipmentSummary-']"
+      ]
+    },
+    {
+      "filters": {
+        "urlMatches": "amazon.com/.*/dp/.*"
+      },
+      "load": [
+        "body"
+      ],
+      "leave": [
+        "body"
+      ]
+    },
+    {
+      "filters": {
+        "urlMatches": "amazon.com/dp/.*"
+      },
+      "load": [
+        "body"
+      ],
+      "leave": [
+        "body"
+      ]
+    },
+    {
+      "filters": {
+        "urlMatches": "amazon.com/gp/product/.*"
+      },
+      "load": [
+        "body"
+      ],
+      "leave": [
+        "body"
+      ]
+    }
+  ],
+  "upload-url": "https://pilot.webmunk.org/data/add-bundle.json",
+  "enroll-url": "https://enroll.webmunk.org/enroll/enroll.json",
+  "uninstall-url": "https://enroll.webmunk.org/enroll/uninstall?identifier=<IDENTIFIER>",
+  "tasks": []
+}
