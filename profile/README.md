@@ -1,6 +1,10 @@
 # Welcome to the Webmunk Project
 
-For more information about Webmunk, visit our website at [www.webmunk.org](https://www.webmunk.org/).
+Webmunk is a web browser extension and data collection platform to conduct observational and experimental research studies on the Internet.
+
+Webmunk is open-source and available to all interested researchers. You can access the code and documentation here.
+
+The primary creators of Webmunk are Chiara Farronato (Harvard Business School), Andrey Fradkin (Boston University), and Chris Karr (Audacious Software). Please contact Professors Farronato or Fradkin to discuss any research related aspects of Webmunk. Please contact Chris Karr at Audacious Software if you're in need of development assistance or consulting.
 
 ## What would you like to do?
 
